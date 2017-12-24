@@ -18,6 +18,6 @@ var server = http.createServer(function(request, response) {
   response.writeHead(200, {'Content-Type': 'text/plain' });
   response.end('Helloooo World\n');
 }).listen(port, function() {
-  console.log("SServer running at http://our site" + port + "/");
+  console.log("SServer running at http://our site " + port + "/");
 });
 
