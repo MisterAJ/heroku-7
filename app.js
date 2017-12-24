@@ -1,6 +1,25 @@
 'use strict';
 // var express = require('express');
  
+// load modules
+var express = require('express'),
+    jsonParser = require('body-parser').json,
+    mongoose = require('mongoose'),
+    therapies = require('./routes/therapies'),
+    users = require('./routes/users'),
+    index = require('./routes/index'),
+    auth = require('./routes/auth'),
+    bodyParser = require('body-parser'), //very important 
+    methodOverride = require('method-override'),
+    passport = require('passport'),
+    FacebookStrategy = require('passport-facebook').Strategy,
+    session = require ('express-session'),
+    MongoStore = require('connect-mongo')(session),
+    User = require("./models/user"),
+    Twit       = require('twit'),
+    config     = require('./src/config'),     // Object literal containing Twitter                                      //API access key and token
+    moment = require('moment');
+ 
 // var app = express();
 var path = require('path');
 
