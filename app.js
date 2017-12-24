@@ -15,8 +15,8 @@ var path = require("path");
 
 var server = http.createServer(function(request, response) {
   console.log('log create Server');
-  response.writeHead(200, {'Content-Type': 'text/plain' });
-  response.end('Helloooo World\n');
+  // response.writeHead(200, {'Content-Type': 'text/plain' });
+  // response.end('Helloooo World\n');
 }).listen(port, function() {
   console.log("SServer running at http://our site " + port + "/");
 });
