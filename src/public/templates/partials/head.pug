@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    // title Search Therapy
+    // bootstrap css
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ', crossorigin='anonymous')
+    link(rel='stylesheet', href='/static/css/custom.css')
+  // navbar
+  nav.navbar.navbar-toggleable-md.navbar-inverse.bg-primary
+    .containerHead
+      ul.navbar-nav.mr-auto
+        li.nav-item
+          a.nav-link(href='/') Home
+        li.nav-item
+          a.nav-link(href='/twitter') Twitter
+        if admin
+          li.nav-item
+            a.nav-link(href='/therapies/list') Therapy List
+          li.nav-item
+            a.nav-link(href='/users/list') User List
+        if !currentUser
+            a.btn(href='/register') Sign Up
+        if currentUser
+          div
+            img.avatar.img-circle.hidden-xs-down(src='/static/img/avatar.png')
+            a.btn(href='/logout') Log Out
+        else
+          a.btn(href='/login') Log In
+  // /navbar
+  
+  block content
+  
+  

@@ -14,9 +14,11 @@
     "express-session": "^1.15.6",
     "method-override": "^2.3.10",
     "moment": "^2.20.1",
+    "mongo": "^0.1.0",
     "mongoose": "^4.13.7",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
+    "pug": "^2.0.0-rc.4",
     "twit": "^2.2.9"
   },
   "scripts": {
